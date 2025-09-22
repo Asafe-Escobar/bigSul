@@ -48,10 +48,8 @@ const Hero = () => {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-foreground/90 via-foreground/75 to-primary/60"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent"></div>
-          {/* Enhanced animated overlay */}
-          <div className="absolute inset-0 bg-gradient-radial from-primary/30 via-transparent to-transparent animate-pulse-glow"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-700 opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-purple-500 via-transparent to-transparent animate-pulse"></div>
           
           {/* Professional mesh overlay */}
           <div className="absolute inset-0 mesh-background opacity-20"></div>

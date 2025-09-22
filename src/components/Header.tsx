@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 hover-scale">
                         <img 
-              src="/src/assets/big-sul-logo.png" 
+              src={bigSulLogo} 
               alt="Big Sul Serviços" 
               className="h-20 sm:h-24 md:h-24 lg:h-28 xl:h-32 w-auto object-contain filter drop-shadow-lg hover:drop-shadow-xl transition-all duration-300 hover:scale-105" 
             />
