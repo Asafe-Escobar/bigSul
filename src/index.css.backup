@@ -1,0 +1,890 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 94.1%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* Background profissional limpo */
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Estilo para cards e seções */
+.bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+/* Efeito glass melhorado */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão flutuante do WhatsApp */
+/* Botão flutuante do WhatsApp - MOBILE FIRST */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #25D366, #1DA851);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: none;
+  cursor: pointer;
+  animation: pulse-glow 2s infinite;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
+
+@media (min-width: 768px) {
+  .floating-whatsapp {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  }
+}
+
+/* Dropdown do menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.75rem;
+  width: 13rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.dropdown-menu a:first-child {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+/* Estilos para o header */
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+/* Botões do header */
+.phone-button {
+  background: linear-gradient(135deg, #64748b, #475569);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid transparent;
+}
+
+.phone-button:hover {
+  background: linear-gradient(135deg, #475569, #334155);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(100, 116, 139, 0.3);
+  color: white;
+}
+
+.whatsapp-button {
+  background: linear-gradient(135deg, #25D366, #1DA851);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-button:hover {
+  background: linear-gradient(135deg, #1DA851, #16A34A);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  color: white;
+}
+
+/* Estilos para botões */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  color: white;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366, #1DA851);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #1DA851, #16A34A);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  color: white;
+}
+
+/* Estilos para seções */
+.section-gradient {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Animações suaves */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-bounce {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animação de pulso com glow */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Sombras elegantes */
+.shadow-elegant {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+/* Texto com gradiente */
+.text-gradient {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* SISTEMA DE IMAGENS ULTRA RESPONSIVO - MOBILE FIRST */
+.hero-mobile-optimized {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 0 !important;
+}
+
+/* FORÇA AS IMAGENS A APARECEREM EM QUALQUER DISPOSITIVO */
+img.hero-mobile-optimized {
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+}
+
+/* MOBILE PEQUENO (até 480px) - Ultra otimizado para caminhões */
+@media (max-width: 480px) {
+  .hero-mobile-optimized {
+    object-position: 85% 40% !important; /* Foco no caminhão, parte central */
+    transform: scale(1.25) translateX(-10%) !important; /* Zoom + ajuste posição */
+    filter: brightness(0.65) contrast(1.4) saturate(1.2) !important;
+    transform-origin: 85% 40% !important;
+  }
+
+  /* Container pai otimizado */
+  .section-professional {
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* Overlay ultra escuro para contraste máximo */
+  .section-professional .absolute.inset-0.bg-gradient-to-br {
+    background: linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.9) 0%, 
+      rgba(15, 23, 42, 0.85) 40%, 
+      rgba(30, 41, 59, 0.7) 70%,
+      rgba(59, 130, 246, 0.4) 100%) !important;
+    z-index: 1 !important;
+  }
+
+  .section-professional .absolute.inset-0.bg-gradient-to-t {
+    background: linear-gradient(to top, 
+      rgba(0, 0, 0, 0.95) 0%, 
+      rgba(0, 0, 0, 0.7) 30%, 
+      rgba(0, 0, 0, 0.3) 60%,
+      transparent 80%) !important;
+    z-index: 2 !important;
+  }
+
+  /* Garantir que o conteúdo fique acima */
+  .relative.z-10 {
+    z-index: 10 !important;
+  }
+}
+
+/* MOBILE MÉDIO (481px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
+  .hero-mobile-optimized {
+    object-position: 80% 35% !important;
+    transform: scale(1.2) translateX(-5%) !important;
+    filter: brightness(0.7) contrast(1.35) saturate(1.15) !important;
+    transform-origin: 80% 35% !important;
+  }
+}
+
+/* MOBILE GRANDE/TABLET PEQUENO (641px - 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero-mobile-optimized {
+    object-position: 75% center !important;
+    transform: scale(1.15) !important;
+    filter: brightness(0.75) contrast(1.3) !important;
+    transform-origin: 75% center !important;
+  }
+}
+  
+  /* Overlay super escuro para texto legível */
+  .section-professional .absolute.inset-0.bg-gradient-to-br {
+    background: linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.9) 0%, 
+      rgba(15, 23, 42, 0.85) 40%, 
+      rgba(30, 41, 59, 0.7) 70%, 
+      rgba(59, 130, 246, 0.4) 100%) !important;
+  }
+  
+  .section-professional .absolute.inset-0.bg-gradient-to-t {
+    background: linear-gradient(to top, 
+      rgba(0, 0, 0, 0.95) 0%, 
+      rgba(0, 0, 0, 0.5) 30%, 
+      transparent 60%) !important;
+    z-index: 2 !important;
+  }
+
+  /* Garantir que o conteúdo fique acima */
+  .relative.z-10 {
+    z-index: 10 !important;
+  }
+}
+
+/* MOBILE MÉDIO (481px - 640px) - Limpo e otimizado */
+@media (min-width: 481px) and (max-width: 640px) {
+  .hero-mobile-optimized {
+    object-position: 80% 35% !important;
+    transform: scale(1.2) translateX(-5%) !important;
+    filter: brightness(0.7) contrast(1.35) saturate(1.15) !important;
+    transform-origin: 80% 35% !important;
+  }
+  
+  .section-professional .absolute.inset-0.bg-gradient-to-br {
+    background: linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.85) 0%, 
+      rgba(15, 23, 42, 0.8) 50%, 
+      rgba(59, 130, 246, 0.5) 100%) !important;
+  }
+}
+
+/* MOBILE GRANDE/TABLET PEQUENO (641px - 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero-mobile-optimized {
+    object-position: 70% center !important;
+    transform: scale(1.1) !important;
+    filter: brightness(0.8) contrast(1.2) !important;
+  }
+  
+  .section-professional .absolute.inset-0.bg-gradient-to-br {
+    background: linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.8) 0%, 
+      rgba(15, 23, 42, 0.7) 50%, 
+      rgba(59, 130, 246, 0.5) 100%) !important;
+  }
+}
+
+/* TABLET (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-mobile-optimized {
+    object-position: 65% center !important;
+    transform: scale(1.05) !important;
+    filter: brightness(0.85) contrast(1.15) !important;
+  }
+}
+
+/* DESKTOP (1025px+) */
+@media (min-width: 1025px) {
+  .hero-mobile-optimized {
+    object-position: center center !important;
+    transform: scale(1) !important;
+    filter: brightness(0.9) contrast(1.1) !important;
+  }
+}
+
+/* MOBILE FIRST - Responsividade para Mobile - ATUALIZADO */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    bottom: 15px;
+    right: 15px;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+
+  /* Header mobile */
+  header {
+    padding-bottom: 0.75rem !important;
+  }
+
+  /* Botões mobile menores */
+  .phone-button,
+  .whatsapp-button {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+
+  /* Logo mobile ajustada */
+  .hover-scale {
+    transform-origin: left center;
+  }
+
+  /* FORÇA absoluta para imagens aparecerem no mobile */
+  .hero-mobile-optimized {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Seção hero mobile */
+  .min-h-screen {
+    min-height: 100vh !important;
+    min-height: 100svh !important; /* Safari mobile fix */
+    position: relative !important;
+  }
+
+  /* Menu mobile melhorado */
+  .md\:hidden nav {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Containers mobile */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Textos mobile otimizados - mais contrastantes */
+  .hero-title {
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
+    font-weight: 900 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9) !important;
+    font-weight: 700 !important;
+  }
+
+  /* Texto de descrição mais legível */
+  .hero-description {
+    font-size: 0.9rem !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8) !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Cards de serviços mobile */
+  .service-card img {
+    height: 200px !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Container do hero com background garantido */
+  .section-professional {
+    background: #0f172a !important; /* Fallback escuro */
+    position: relative !important;
+    overflow: hidden !important;
+  }
+}
+
+/* Smartphones muito pequenos */
+@media (max-width: 480px) {
+  .hero-bg-image {
+    object-position: center 25% !important;
+  }
+  
+  .floating-whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  .service-card img {
+    height: 180px !important;
+  }
+}
+
+/* Responsividade para tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .phone-button,
+  .whatsapp-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Responsividade para desktop grande */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .phone-button,
+  .whatsapp-button {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Efeitos de hover para cards */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .whatsapp-button,
+  .phone-button {
+    font-size: 0.9rem;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    line-height: 0.9;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Responsive background images */
+  .hero-bg-image {
+    object-position: center center !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .whatsapp-button,
+  .phone-button {
+    font-size: 1.1rem;
+    padding: 1.25rem 2rem;
+  }
+
+  /* Tablet background images */
+  .hero-bg-image {
+    object-position: center center;
+    object-fit: cover;
+  }
+}
+
+/* Desktop Enhancements */
+@media (min-width: 1025px) {
+  .hero-title {
+    font-size: 7rem;
+    line-height: 0.85;
+  }
+
+  .hero-subtitle {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-button,
+  .phone-button {
+    font-size: 1.25rem;
+    padding: 1.5rem 2.5rem;
+  }
+
+  .logo-hover:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  }
+
+  /* Desktop background images */
+  .hero-bg-image {
+    object-position: center center;
+    object-fit: cover;
+  }
+}
+
+/* Otimizações adicionais de responsividade - MOBILE FIRST */
+@media (max-width: 480px) {
+  /* Smartphones pequenos */
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  .glass-effect {
+    padding: 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Imagens ultra responsivas para mobile pequeno */
+  .hero-bg-image {
+    object-position: center 30% !important;
+    transform: scale(1.05); /* Leve zoom para melhor enquadramento */
+  }
+
+  .service-card img {
+    height: 160px !important;
+    object-position: center top;
+  }
+
+  /* Stats cards mobile */
+  .glass-effect.rounded-2xl {
+    padding: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Botões mobile otimizados */
+  .whatsapp-button,
+  .phone-button {
+    font-size: 0.9rem !important;
+    padding: 1rem !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+  /* Smartphones grandes */
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-bg-image {
+    object-position: center 25%;
+  }
+
+  .service-card img {
+    height: 190px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  /* Tablets pequenos */
+  .hero-bg-image {
+    object-position: center 20%;
+  }
+
+  .service-card img {
+    height: 220px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Telas grandes - mínimo necessário */
+  .hero-title {
+    font-size: 6rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 3rem !important;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .hero-bg-image {
+    object-position: center center;
+  }
+}
