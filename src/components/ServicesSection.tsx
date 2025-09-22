@@ -8,7 +8,7 @@ const ServicesSection = () => {
     <section 
       className="py-12 sm:py-16 lg:py-20 min-h-screen"
       style={{
-        background: 'linear-gradient(135deg, #8c9097ff 0%, #334155 50%, #000000ff 100%)',
+        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #000000 100%)',
         backgroundAttachment: 'fixed'
       }}
     >
@@ -42,7 +42,7 @@ const ServicesSection = () => {
                   alt="Equipe profissional de limpeza de fossas"
                   className="w-full h-64 sm:h-80 lg:h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10"></div>
                 <div className="absolute top-6 left-6">
                   <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     ⭐ Serviço Premium
