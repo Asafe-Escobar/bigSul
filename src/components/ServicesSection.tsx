@@ -8,7 +8,7 @@ const ServicesSection = () => {
     <section 
       className="py-12 sm:py-16 lg:py-20 min-h-screen"
       style={{
-        background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #000000 100%)',
+        background: 'linear-gradient(135deg, #8c9097ff 0%, #334155 50%, #000000ff 100%)',
         backgroundAttachment: 'fixed'
       }}
     >
