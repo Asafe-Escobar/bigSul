@@ -68,7 +68,7 @@ const Header = () => {
                     className="dropdown-item"
                     onClick={() => setIsServicesDropdownOpen(false)}
                   >
-                    Limpa Entulho
+                    Tira Entulho
                   </Link>
                 </div>
               )}
@@ -143,7 +143,7 @@ const Header = () => {
                         setIsServicesDropdownOpen(false);
                       }}
                     >
-                      Limpa Entulho
+                      Tira Entulho
                     </Link>
                   </div>
                 )}

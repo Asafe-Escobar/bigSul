@@ -52,8 +52,7 @@ const Entulho = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed max-w-3xl mx-auto">
-              Descarte responsável e ecológico de entulho, móveis antigos e restos de construção. 
-              Serviço rápido com caminhões adequados para cada tipo de material.
+              Sua obra acabou, mas a bagunça ficou? Não deixe que restos de construção, entulho e móveis velhos tragam desorganização para seu espaço. Recupere seu ambiente de forma rápida e segura. Removemos tudo para você, deixando o local limpo e livre para ser aproveitado.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -266,8 +265,7 @@ const Entulho = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Sustentável</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Fazemos a separação e encaminhamento correto dos materiais, 
-                priorizando sempre a reciclagem e o reaproveitamento.
+                Somos a única empresa da região com aterro próprio para o descarte correto de resíduos. Contratando a Big Sul, você tem a certeza de um serviço completo e ecologicamente correto.
               </p>
             </div>
           </div>

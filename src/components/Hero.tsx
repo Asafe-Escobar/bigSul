@@ -11,11 +11,12 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   // Imagens corretas de caminhões de limpeza de fossas
+  const cacheBuster = "?v=1"; // força recarregar imagens do public
   const backgroundImages = [
-    heroTruck1,
-    heroTruck2,
-    heroTruck3,
-    heroTruck4,
+    { primary: `/client-hero-1.jpg${cacheBuster}` , fallback: heroTruck1 },
+    { primary: `/client-hero-2.jpg${cacheBuster}` , fallback: heroTruck2 },
+    { primary: `/client-hero-3.jpg${cacheBuster}` , fallback: heroTruck3 },
+    { primary: `/client-hero-4.jpg${cacheBuster}` , fallback: heroTruck4 },
   ];
 
   useEffect(() => {
@@ -42,7 +43,8 @@ const Hero = () => {
             >
               {/* Imagem visível em TODAS as telas (mobile e desktop) */}
               <img
-                src={image}
+                src={image.primary}
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = image.fallback; }}
                 alt={`Caminhão de limpeza de fossas profissional ${index + 1}`}
                 className="w-full h-full object-cover hero-mobile-optimized"
               />
@@ -61,7 +63,7 @@ const Hero = () => {
             <div className="mb-8 sm:mb-12">
               <div className="flex flex-col items-center mb-6 sm:mb-8">
                 <span className="inline-block glass-effect text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg lg:text-xl font-bold shadow-glow animate-float backdrop-blur-md">
-                  🚛 Atendimento 24h • Orçamento Gratuito
+                  🚛 Orçamento Gratuito
                 </span>
               </div>
               <h1 className="text-center mb-6 sm:mb-8">
@@ -69,8 +71,8 @@ const Hero = () => {
                 <div className="hero-subtitle text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mt-2 text-shadow-lg">SERVIÇOS</div>
               </h1>
               <p className="hero-description text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/95 leading-relaxed max-w-4xl mx-auto text-shadow-lg px-4">
-                🏆 Limpeza de Fossas, Desentupimento e Sistema Vácuo<br/>
-                <span className="text-accent-light font-semibold text-sm sm:text-base md:text-lg lg:text-xl">Equipamentos modernos • Equipe especializada • Preço justo</span>
+                🏆 Limpeza de Fossas, Desentupimento e Tira entulho - Atendimento Imediato e Preço Justo.<br/>
+                <span className="text-accent-light font-semibold text-sm sm:text-base md:text-lg lg:text-xl">Equipamentos modernos • Equipe especializada</span>
               </p>
             </div>
 
@@ -81,8 +83,8 @@ const Hero = () => {
                 <div className="text-white/90 font-medium text-sm sm:text-base">Clientes Satisfeitos</div>
               </div>
               <div className="glass-effect rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-smooth hover-scale animate-float" style={{animationDelay: '0.5s'}}>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-2 sm:mb-3">24h</div>
-                <div className="text-white/90 font-medium text-sm sm:text-base">Atendimento Disponível</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-2 sm:mb-3">Imediato</div>
+                <div className="text-white/90 font-medium text-sm sm:text-base">Atendimento Rápido</div>
               </div>
               <div className="glass-effect rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-smooth hover-scale animate-float" style={{animationDelay: '1s'}}>
                 <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-2 sm:mb-3">R$ 159</div>
@@ -119,10 +121,6 @@ const Hero = () => {
               <div className="flex items-center space-x-3 glass-effect px-6 py-3 rounded-full">
                 <CheckCircle className="w-6 h-6 text-accent" />
                 <span className="font-medium">Equipe Treinada</span>
-              </div>
-              <div className="flex items-center space-x-3 glass-effect px-6 py-3 rounded-full">
-                <CheckCircle className="w-6 h-6 text-accent" />
-                <span className="font-medium">Garantia de Serviço</span>
               </div>
             </div>
           </div>

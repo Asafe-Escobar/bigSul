@@ -15,12 +15,11 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white drop-shadow mb-4 sm:mb-6">
             Limpeza de Fossas Profissional
           </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto">
-            Especialistas em limpeza e manutenção de fossas sépticas com equipamentos modernos, 
-            atendimento rápido e total responsabilidade ambiental.
+          <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            Evite o mau cheiro e o transbordamento. Nossa equipe realiza a limpeza completa da sua fossa de forma rápida e higiênica, restaurando a normalidade do seu lar ou empresa.
           </p>
         </div>
 
@@ -39,7 +38,7 @@ const ServicesSection = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={serviceTeam}
-                  alt="Equipe profissional de limpeza de fossas"
+                  alt="Caminhão limpa fossa em operação"
                   className="w-full h-64 sm:h-80 lg:h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10"></div>

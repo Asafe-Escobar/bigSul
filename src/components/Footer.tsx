@@ -128,11 +128,7 @@ const Footer = () => {
                   <p className="text-white font-medium">07:00 - 12:00</p>
                 </div>
               </div>
-              <div className="mt-4 p-3 bg-primary/20 rounded-lg">
-                <p className="text-primary font-semibold text-sm">
-                  🚨 Atendimento de emergência 24h
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>
