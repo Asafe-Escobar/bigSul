@@ -3,21 +3,28 @@ import { Phone, MessageCircle, CheckCircle } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import GTM from "@/components/GTM";
 // Voltando para as imagens corretas de caminhões de limpeza de fossas
-import heroTruck1 from "@/assets/hero-truck.jpg";
-import heroTruck2 from "@/assets/hero-truck-2.jpg";
-import heroTruck3 from "@/assets/hero-truck-3.jpg";
-import heroTruck4 from "@/assets/hero-truck-4.jpg";
+// Substituído para usar imagens reais no diretório public (adicione os arquivos mencionados em /public)
+// Nomes sugeridos (coloque suas fotos reais):
+//  - /hero-real-1.jpg  (caminhão frente - foto 1)
+//  - /hero-real-2.jpg  (rua com caminhões - foto 3)
+//  - /hero-real-3.jpg  (trabalho em execução - foto 4 recortada)
+//  - /hero-real-4.jpg  (opcional: outra variação ou repetir a 1)
+// Mantivemos imports antigos como fallback caso as novas não existam ainda.
+import heroTruck1 from "@/assets/hero-truck.jpg"; // fallback
+import heroTruck2 from "@/assets/hero-truck-2.jpg"; // fallback
+import heroTruck3 from "@/assets/hero-truck-3.jpg"; // fallback
+import heroTruck4 from "@/assets/hero-truck-4.jpg"; // fallback
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   // Imagens corretas de caminhões de limpeza de fossas
-  const cacheBuster = "?v=1"; // força recarregar imagens do public
+  const cacheBuster = "?v=2"; // atualiza cache para novas imagens reais
   const backgroundImages = [
-    { primary: `/client-hero-1.jpg${cacheBuster}` , fallback: heroTruck1 },
-    { primary: `/client-hero-2.jpg${cacheBuster}` , fallback: heroTruck2 },
-    { primary: `/client-hero-3.jpg${cacheBuster}` , fallback: heroTruck3 },
-    { primary: `/client-hero-4.jpg${cacheBuster}` , fallback: heroTruck4 },
+    { primary: `/hero-real-1.jpg${cacheBuster}`, fallback: heroTruck1, alt: 'Caminhão limpa fossa Big Sul em operação (frontal)' },
+    { primary: `/hero-real-2.jpg${cacheBuster}`, fallback: heroTruck2, alt: 'Fila de caminhões de limpeza prontos para atendimento' },
+    { primary: `/hero-real-3.jpg${cacheBuster}`, fallback: heroTruck3, alt: 'Equipe realizando sucção em fossa' },
+    { primary: `/hero-real-4.jpg${cacheBuster}`, fallback: heroTruck4, alt: 'Outro ângulo de caminhão limpa fossa Big Sul' },
   ];
 
   useEffect(() => {
@@ -38,15 +45,18 @@ const Hero = () => {
           {backgroundImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              data-index={index}
+              className={`absolute inset-0 hero-slide transition-opacity duration-1000 ease-in-out ${
                 index === currentImageIndex ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              {/* Imagem visível em TODAS as telas (mobile e desktop) */}
               <img
                 src={image.primary}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchPriority={index === 0 ? 'high' : 'auto'}
                 onError={(e) => { (e.currentTarget as HTMLImageElement).src = image.fallback; }}
-                alt={`Caminhão de limpeza de fossas profissional ${index + 1}`}
+                alt={image.alt}
                 className="w-full h-full object-cover hero-mobile-optimized"
               />
             </div>
@@ -96,14 +106,14 @@ const Hero = () => {
             {/* Enhanced CTA Buttons */}
             <div className="flex flex-col gap-4 sm:gap-6 justify-center items-center mb-6 sm:mb-8 px-4">
               <a
-                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20limpeza%20de%20fossa%20urgente!"
+                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20atendimento%20imediato%20para%20limpeza%20de%20fossa"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => GTM.trackContact('whatsapp', 'limpeza-fossa')}
                 className="whatsapp-button text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 w-full max-w-sm sm:max-w-md transform hover:scale-105 transition-bounce shadow-glow animate-pulse-glow"
               >
                 <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6" />
-                💬 Orçamento WhatsApp
+                💬 Solicitar Atendimento Imediato
               </a>
               <a
                 href="tel:+5586999604704"

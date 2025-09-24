@@ -90,6 +90,14 @@
   z-index: 0;
 }
 
+/* Posições específicas para cada slide no mobile (index pelo data-index) */
+@media (max-width:640px) {
+  .hero-slide[data-index="0"] img { object-position: center center !important; }
+  .hero-slide[data-index="1"] img { object-position: 70% center !important; }
+  .hero-slide[data-index="2"] img { object-position: center 40% !important; }
+  .hero-slide[data-index="3"] img { object-position: center center !important; }
+}
+
 /* MOBILE PRIMEIRO - Foco no caminhão */
 @media (max-width: 640px) {
   .hero-mobile-optimized {

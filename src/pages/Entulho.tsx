@@ -5,7 +5,8 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GTM from "@/components/GTM";
-import entulhoService from "@/assets/entulho-service.jpg";
+import entulhoService from "@/assets/entulho-service.jpg"; // fallback
+const realEntulhoImage = "/entulho-real-1.jpg?v=1"; // coloque a foto da caçamba com este nome no public
 
 const Entulho = () => {
   useEffect(() => {
@@ -38,9 +39,12 @@ const Entulho = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={entulhoService}
-            alt="Serviço profissional de remoção de entulho"
-            className="w-full h-full object-cover"
+            src={realEntulhoImage}
+            onError={(e) => { (e.currentTarget as HTMLImageElement).src = entulhoService; }}
+            alt="Remoção real de entulho com caçamba Big Sul"
+            loading="eager"
+            decoding="async"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/70 to-foreground/40"></div>
         </div>
@@ -63,13 +67,13 @@ const Entulho = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20remoção%20de%20entulho.%20Podem%20me%20passar%20um%20orçamento?"
+                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20remoção%20de%20entulho%20imediata"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-button text-xl px-12 py-6 transform hover:scale-105 transition-smooth"
               >
                 <FaWhatsapp className="w-6 h-6" />
-                Orçamento WhatsApp
+                Solicitar Atendimento Imediato
               </a>
               <a
                 href="tel:+5586999604704"
@@ -171,11 +175,10 @@ const Entulho = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Orçamento Gratuito e Personalizado
+              Atendimento e Avaliação Imediata
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Cada situação é única! Enviamos nossa equipe para avaliar o volume de entulho 
-              e fornecer o melhor preço para seu caso específico.
+              Cada situação é única! Podemos avaliar rapidamente o volume de entulho e fornecer o melhor preço para seu caso específico com rapidez.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12 text-white">
@@ -212,13 +215,13 @@ const Entulho = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20um%20orçamento%20personalizado%20para%20remoção%20de%20entulho.%20Podem%20fazer%20uma%20avaliação?"
+                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20atendimento%20imediato%20para%20remoção%20de%20entulho"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-xl font-bold text-xl transition-all transform hover:scale-105 inline-flex items-center justify-center gap-3"
               >
                 <FaWhatsapp className="w-6 h-6" />
-                Solicitar Avaliação Gratuita
+                Atendimento Imediato
               </a>
               <a
                 href="tel:+5586999604704"

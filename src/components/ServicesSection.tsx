@@ -1,6 +1,9 @@
 import { Truck, Recycle, Clock, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import serviceTeam from "@/assets/service-team.jpg";
+// Imagem atualizada (real) do serviço premium - ajuste o arquivo se necessário
+import serviceTeam from "@/assets/service-mobile-team.jpg"; // fallback
+// Usa imagem real se adicionada no diretório public como /servico-fossa-real.jpg
+const realServiceImage = "/servico-fossa-real.jpg?v=1";
 import entulhoService from "@/assets/entulho-service.jpg";
 
 const ServicesSection = () => {
@@ -37,9 +40,12 @@ const ServicesSection = () => {
               {/* Imagem */}
               <div className="relative overflow-hidden">
                 <img
-                  src={serviceTeam}
-                  alt="Caminhão limpa fossa em operação"
-                  className="w-full h-64 sm:h-80 lg:h-full object-cover"
+                  src={realServiceImage}
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = serviceTeam; }}
+                  alt="Equipe Big Sul realizando limpeza de fossa com caminhão especializado"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-64 sm:h-80 lg:h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10"></div>
                 <div className="absolute top-6 left-6">
@@ -101,24 +107,24 @@ const ServicesSection = () => {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div>
                     <div className="text-sm text-gray-500 mb-1">Preços Promocionais</div>
-                    <div className="text-3xl font-bold text-blue-600">A partir de R$ 180,00</div>
+                    <div className="text-3xl font-bold text-blue-600">A partir de R$ 180</div>
                     <div className="text-sm text-gray-600">Preço varia conforme o tamanho da fossa e localização</div>
                   </div>
                   <div className="flex flex-col gap-3 w-full sm:w-auto">
                     <a
-                      href="https://wa.me/5586999604704?text=Olá! Quero um orçamento para limpeza de fossa."
+                      href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20atendimento%20imediato%20para%20limpeza%20de%20fossa."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2"
                     >
-                      Orçamento WhatsApp
+                      Solicitar Atendimento Imediato
                     </a>
-                    <Link
-                      to="/servicos"
+                    <a
+                      href="tel:+5586999604704"
                       className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2"
                     >
-                      Ligar Agora
-                    </Link>
+                      Ligar Agora (+55 86)
+                    </a>
                   </div>
                 </div>
               </div>

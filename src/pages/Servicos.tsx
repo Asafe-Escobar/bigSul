@@ -100,7 +100,7 @@ const Servicos = () => {
                   <div className="bg-primary/10 rounded-xl p-6 mb-8">
                     <h4 className="text-xl font-bold text-foreground mb-3">Preços Promocionais</h4>
                     <div className="text-3xl font-bold text-primary mb-2">
-                      A partir de R$ 180,00
+                      A partir de R$ 180
                     </div>
                     <p className="text-muted-foreground">
                       *Preço varia conforme o tamanho da fossa e localização
@@ -109,20 +109,20 @@ const Servicos = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20limpeza%20de%20fossa"
+                      href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20atendimento%20imediato%20para%20limpeza%20de%20fossa"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="whatsapp-button"
                     >
                       <FaWhatsapp className="w-5 h-5" />
-                      Orçamento WhatsApp
+                      Solicitar Atendimento Imediato
                     </a>
                     <a
                       href="tel:+5586999604704"
                       className="phone-button"
                     >
                       <Phone className="w-5 h-5" />
-                      Ligar Agora
+                      Ligar Agora (+55 86)
                     </a>
                   </div>
                 </div>
@@ -210,20 +210,20 @@ const Servicos = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20remoção%20de%20entulho"
+                      href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20remoção%20de%20entulho%20imediata"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="whatsapp-button"
                     >
                       <FaWhatsapp className="w-5 h-5" />
-                      Orçamento WhatsApp
+                      Solicitar Atendimento Imediato
                     </a>
                     <a
                       href="tel:+5586999604704"
                       className="phone-button"
                     >
                       <Phone className="w-5 h-5" />
-                      Ligar Agora
+                      Ligar Agora (+55 86)
                     </a>
                   </div>
                 </div>
@@ -308,29 +308,28 @@ const Servicos = () => {
         <section className="py-20 bg-foreground text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Precisa de nossos serviços?
+              Precisa de nossos serviços agora?
             </h2>
             <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
-              Entre em contato agora mesmo e receba um orçamento personalizado 
-              sem compromisso. Estamos prontos para atender você!
+              Fale conosco e tenha atendimento imediato via WhatsApp ou telefone. Resposta rápida e equipe pronta para agir.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586999604704?text=Olá!%20Vi%20a%20página%20de%20serviços%20e%20gostaria%20de%20um%20orçamento"
+                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20atendimento%20imediato"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-button text-xl px-12 py-6"
               >
                 <FaWhatsapp className="w-6 h-6" />
-                Orçamento via WhatsApp
+                Atendimento Imediato
               </a>
               <a
-                href="tel:+5586995182182"
+                href="tel:+5586999604704"
                 className="phone-button text-xl px-12 py-6"
               >
                 <Phone className="w-6 h-6" />
-                Ligar: (86) 99518-2182
+                Ligar: +55 (86) 9960-4704
               </a>
             </div>
           </div>
