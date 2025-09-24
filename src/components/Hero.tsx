@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Phone, MessageCircle, CheckCircle } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import GTM from "@/components/GTM";
 // Voltando para as imagens corretas de caminhões de limpeza de fossas
 import heroTruck1 from "@/assets/hero-truck.jpg";
 import heroTruck2 from "@/assets/hero-truck-2.jpg";
@@ -63,7 +64,7 @@ const Hero = () => {
             <div className="mb-8 sm:mb-12">
               <div className="flex flex-col items-center mb-6 sm:mb-8">
                 <span className="inline-block glass-effect text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg lg:text-xl font-bold shadow-glow animate-float backdrop-blur-md">
-                  🚛 Orçamento Gratuito
+                  🚛 Solicitar Atendimento Imediato
                 </span>
               </div>
               <h1 className="text-center mb-6 sm:mb-8">
@@ -87,7 +88,7 @@ const Hero = () => {
                 <div className="text-white/90 font-medium text-sm sm:text-base">Atendimento Rápido</div>
               </div>
               <div className="glass-effect rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-smooth hover-scale animate-float" style={{animationDelay: '1s'}}>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-2 sm:mb-3">R$ 159</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-2 sm:mb-3">R$ 180</div>
                 <div className="text-white/90 font-medium text-sm sm:text-base">Preço a partir de</div>
               </div>
             </div>
@@ -95,20 +96,22 @@ const Hero = () => {
             {/* Enhanced CTA Buttons */}
             <div className="flex flex-col gap-4 sm:gap-6 justify-center items-center mb-6 sm:mb-8 px-4">
               <a
-                href="https://wa.me/5586995182182?text=Olá!%20Preciso%20de%20limpeza%20de%20fossa%20urgente!"
+                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20limpeza%20de%20fossa%20urgente!"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => GTM.trackContact('whatsapp', 'limpeza-fossa')}
                 className="whatsapp-button text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 w-full max-w-sm sm:max-w-md transform hover:scale-105 transition-bounce shadow-glow animate-pulse-glow"
               >
                 <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6" />
                 💬 Orçamento WhatsApp
               </a>
               <a
-                href="tel:+5586995182182"
+                href="tel:+5586999604704"
+                onClick={() => GTM.trackContact('phone', 'limpeza-fossa')}
                 className="phone-button text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 w-full max-w-sm sm:max-w-md transform hover:scale-105 transition-bounce"
               >
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
-                📞 Ligar: (86) 99518-2182
+                📞 Ligar: (86) 9960-4704
               </a>
             </div>
 
@@ -130,9 +133,10 @@ const Hero = () => {
       {/* Enhanced Floating WhatsApp Button */}
       <div className="fixed bottom-8 right-8 z-50">
         <a
-          href="https://wa.me/5586995182182?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
+          href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => GTM.trackContact('whatsapp', 'floating-button')}
           className="whatsapp-button p-5 rounded-full shadow-elegant hover:shadow-glow transform hover:scale-110 transition-bounce flex items-center justify-center group animate-float"
           title="Fale conosco no WhatsApp"
         >

@@ -78,14 +78,14 @@ const Header = () => {
           {/* Contact Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-3">
             <a
-              href="tel:+5586995182182"
+              href="tel:+5586999604704"
               className="phone-button"
             >
               <Phone className="w-4 h-4" />
-              (86) 99518-2182
+              (86) 9960-4704
             </a>
             <a
-              href="https://wa.me/5586995182182?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
+              href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-button"
@@ -152,14 +152,14 @@ const Header = () => {
               {/* Mobile Contact Buttons */}
               <div className="flex flex-col space-y-3 pt-4">
                 <a
-                  href="tel:+5586995182182"
+                  href="tel:+5586999604704"
                   className="phone-button justify-center"
                 >
                   <Phone className="w-4 h-4" />
-                  (86) 99518-2182
+                  (86) 9960-4704
                 </a>
                 <a
-                  href="https://wa.me/5586995182182?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
+                  href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-button justify-center"

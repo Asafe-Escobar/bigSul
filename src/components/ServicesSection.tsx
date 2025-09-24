@@ -101,12 +101,12 @@ const ServicesSection = () => {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div>
                     <div className="text-sm text-gray-500 mb-1">Preços Promocionais</div>
-                    <div className="text-3xl font-bold text-blue-600">A partir de R$ 159,99</div>
+                    <div className="text-3xl font-bold text-blue-600">A partir de R$ 180,00</div>
                     <div className="text-sm text-gray-600">Preço varia conforme o tamanho da fossa e localização</div>
                   </div>
                   <div className="flex flex-col gap-3 w-full sm:w-auto">
                     <a
-                      href="https://wa.me/5586995182182?text=Olá! Quero um orçamento para limpeza de fossa."
+                      href="https://wa.me/5586999604704?text=Olá! Quero um orçamento para limpeza de fossa."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2"

@@ -75,16 +75,16 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
                 <a
-                  href="tel:+5586995182182"
+                  href="tel:+5586999604704"
                   className="text-white/80 hover:text-primary transition-colors"
                 >
-                  (86) 99518-2182
+                  (86) 9960-4704
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaWhatsapp className="w-4 h-4 text-primary flex-shrink-0" />
                 <a
-                  href="https://wa.me/5586995182182"
+                  href="https://wa.me/5586999604704"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-primary transition-colors"
@@ -95,10 +95,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
                 <a
-                  href="mailto:contato@bigsul.com.br"
+                  href="mailto:sulentulho@gmail.com"
                   className="text-white/80 hover:text-primary transition-colors"
                 >
-                  contato@bigsul.com.br
+                  sulentulho@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -118,14 +118,14 @@ const Footer = () => {
                 <Clock className="w-4 h-4 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-white/80 text-sm">Segunda a Sexta</p>
-                  <p className="text-white font-medium">07:00 - 18:00</p>
+                  <p className="text-white font-medium">07:30 - 17:00</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-4 h-4 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-white/80 text-sm">Sábado</p>
-                  <p className="text-white font-medium">07:00 - 12:00</p>
+                  <p className="text-white font-medium">07:30 - 16:00</p>
                 </div>
               </div>
               

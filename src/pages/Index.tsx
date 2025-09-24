@@ -1,10 +1,16 @@
 import { Phone, MessageCircle } from "lucide-react";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
+import GTM from "@/components/GTM";
 
 const Index = () => {
+  useEffect(() => {
+    GTM.trackPageView('Home');
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -56,7 +62,7 @@ const Index = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a
-                  href="https://wa.me/5586995182182?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
+                  href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-button text-xl px-12 py-6"
@@ -65,11 +71,11 @@ const Index = () => {
                   Orçamento via WhatsApp
                 </a>
                 <a
-                  href="tel:+5586995182182"
+                  href="tel:+5586999604704"
                   className="phone-button text-xl px-12 py-6"
                 >
                   <Phone className="w-6 h-6" />
-                  Ligar: (86) 99518-2182
+                  Ligar: (86) 9960-4704
                 </a>
               </div>
             </div>

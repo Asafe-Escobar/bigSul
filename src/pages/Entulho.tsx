@@ -1,11 +1,17 @@
 import { Phone, MessageCircle, Recycle, Truck, Shield, Clock, CheckCircle, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GTM from "@/components/GTM";
 import entulhoService from "@/assets/entulho-service.jpg";
 
 const Entulho = () => {
+  useEffect(() => {
+    GTM.trackPageView('Entulho');
+  }, []);
+
   const services = [
     {
       title: "Entulho de Construção",
@@ -57,7 +63,7 @@ const Entulho = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586995182182?text=Olá!%20Preciso%20de%20remoção%20de%20entulho.%20Podem%20me%20passar%20um%20orçamento?"
+                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20remoção%20de%20entulho.%20Podem%20me%20passar%20um%20orçamento?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-button text-xl px-12 py-6 transform hover:scale-105 transition-smooth"
@@ -66,11 +72,11 @@ const Entulho = () => {
                 Orçamento WhatsApp
               </a>
               <a
-                href="tel:+5586995182182"
+                href="tel:+5586999604704"
                 className="phone-button text-xl px-12 py-6 transform hover:scale-105 transition-smooth"
               >
                 <Phone className="w-6 h-6" />
-                Ligar: (86) 99518-2182
+                Ligar: (86) 9960-4704
               </a>
             </div>
           </div>
@@ -206,7 +212,7 @@ const Entulho = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586995182182?text=Olá!%20Preciso%20de%20um%20orçamento%20personalizado%20para%20remoção%20de%20entulho.%20Podem%20fazer%20uma%20avaliação?"
+                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20um%20orçamento%20personalizado%20para%20remoção%20de%20entulho.%20Podem%20fazer%20uma%20avaliação?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-xl font-bold text-xl transition-all transform hover:scale-105 inline-flex items-center justify-center gap-3"
@@ -215,11 +221,11 @@ const Entulho = () => {
                 Solicitar Avaliação Gratuita
               </a>
               <a
-                href="tel:+5586995182182"
+                href="tel:+5586999604704"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-12 py-6 rounded-xl font-bold text-xl transition-all transform hover:scale-105 inline-flex items-center justify-center gap-3"
               >
                 <Phone className="w-6 h-6" />
-                Ligar: (86) 99518-2182
+                Ligar: (86) 9960-4704
               </a>
             </div>
           </div>

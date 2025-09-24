@@ -1,12 +1,18 @@
 import { ArrowLeft, Truck, Recycle, CheckCircle, Phone, MessageCircle, Clock, Shield, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GTM from "@/components/GTM";
 import serviceTeam from "@/assets/service-team.jpg";
 import entulhoService from "@/assets/entulho-service.jpg";
 
 const Servicos = () => {
+  useEffect(() => {
+    GTM.trackPageView('Servicos');
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -94,7 +100,7 @@ const Servicos = () => {
                   <div className="bg-primary/10 rounded-xl p-6 mb-8">
                     <h4 className="text-xl font-bold text-foreground mb-3">Preços Promocionais</h4>
                     <div className="text-3xl font-bold text-primary mb-2">
-                      A partir de R$ 159,99
+                      A partir de R$ 180,00
                     </div>
                     <p className="text-muted-foreground">
                       *Preço varia conforme o tamanho da fossa e localização
@@ -103,7 +109,7 @@ const Servicos = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://wa.me/5586995182182?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20limpeza%20de%20fossa"
+                      href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20limpeza%20de%20fossa"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="whatsapp-button"
@@ -112,7 +118,7 @@ const Servicos = () => {
                       Orçamento WhatsApp
                     </a>
                     <a
-                      href="tel:+5586995182182"
+                      href="tel:+5586999604704"
                       className="phone-button"
                     >
                       <Phone className="w-5 h-5" />
@@ -204,7 +210,7 @@ const Servicos = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://wa.me/5586995182182?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20remoção%20de%20entulho"
+                      href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20remoção%20de%20entulho"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="whatsapp-button"
@@ -213,7 +219,7 @@ const Servicos = () => {
                       Orçamento WhatsApp
                     </a>
                     <a
-                      href="tel:+5586995182182"
+                      href="tel:+5586999604704"
                       className="phone-button"
                     >
                       <Phone className="w-5 h-5" />
@@ -311,7 +317,7 @@ const Servicos = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586995182182?text=Olá!%20Vi%20a%20página%20de%20serviços%20e%20gostaria%20de%20um%20orçamento"
+                href="https://wa.me/5586999604704?text=Olá!%20Vi%20a%20página%20de%20serviços%20e%20gostaria%20de%20um%20orçamento"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-button text-xl px-12 py-6"
