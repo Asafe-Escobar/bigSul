@@ -71,3 +71,4 @@ export const useGTM = () => {
 };
 
 export default GTM;
+

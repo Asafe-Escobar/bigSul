@@ -81,3 +81,4 @@ O GTM está totalmente configurado e rastreando:
 - ✅ Cliques em botões de contato
 - ✅ Interesse em serviços
 - ✅ Eventos personalizados
+
