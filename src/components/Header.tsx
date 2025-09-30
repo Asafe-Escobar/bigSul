@@ -2,7 +2,8 @@ import { Phone, MessageCircle, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
-import bigSulLogo from "@/assets/big-sul-logo.png";
+// Usando a logo da pasta public
+const bigSulNewLogo = "/Bigsul2 (1).png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -30,10 +31,10 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 hover-scale">
-                        <img 
-              src={bigSulLogo} 
+            <img 
+              src={bigSulNewLogo} 
               alt="Big Sul Serviços" 
-              className="h-20 sm:h-24 md:h-24 lg:h-28 xl:h-32 w-auto object-contain filter drop-shadow-lg hover:drop-shadow-xl transition-all duration-300 hover:scale-105" 
+              className="h-20 sm:h-24 md:h-24 lg:h-28 xl:h-32 w-auto object-contain filter drop-shadow-lg hover:drop-shadow-xl transition-all duration-300 hover:scale-105"
             />
             <div>
               <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground">Big Sul</h1>

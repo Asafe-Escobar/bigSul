@@ -17,6 +17,94 @@ const Index = () => {
       <main>
         <Hero />
         <ServicesSection />
+        
+        {/* Mobile-First Image Gallery */}
+        <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                Nosso Trabalho em Ação
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                Veja nossos equipamentos modernos e equipe especializada trabalhando
+              </p>
+            </div>
+            
+            {/* Mobile-optimized grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8">
+              {/* Imagem 1 - Caminhão */}
+              <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="/hero-real-1.jpg" 
+                  alt="Caminhão limpa fossa Big Sul em operação"
+                  className="w-full h-64 sm:h-72 md:h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                  <h3 className="font-bold text-lg mb-1">Equipamentos Modernos</h3>
+                  <p className="text-sm text-white/90">Caminhões especializados para limpeza</p>
+                </div>
+              </div>
+
+              {/* Imagem 2 - Equipe trabalhando */}
+              <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="/servico-fossa-real.jpg" 
+                  alt="Equipe Big Sul realizando limpeza de fossa"
+                  className="w-full h-64 sm:h-72 md:h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                  <h3 className="font-bold text-lg mb-1">Equipe Especializada</h3>
+                  <p className="text-sm text-white/90">Profissionais treinados e experientes</p>
+                </div>
+              </div>
+
+              {/* Imagem 3 - Trabalho em execução */}
+              <div className="relative group overflow-hidden rounded-2xl shadow-lg sm:col-span-2 lg:col-span-1">
+                <img 
+                  src="/hero-real-3.jpeg" 
+                  alt="Processo de limpeza de fossa em andamento"
+                  className="w-full h-64 sm:h-72 md:h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                  <h3 className="font-bold text-lg mb-1">Trabalho Limpo</h3>
+                  <p className="text-sm text-white/90">Sem sujeira, sem complicações</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA móvel otimizado */}
+            <div className="text-center">
+              <p className="text-muted-foreground mb-6 text-base md:text-lg">
+                Quer ver nosso trabalho de perto? Entre em contato!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <a
+                  href="https://wa.me/5586999604704?text=Olá!%20Gostaria%20de%20ver%20mais%20sobre%20seus%20serviços"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-button text-base px-8 py-3"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Ver Mais Trabalhos
+                </a>
+                <a
+                  href="tel:+5586999604704"
+                  className="phone-button text-base px-8 py-3"
+                >
+                  <Phone className="w-5 h-5" />
+                  Ligar Agora
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">

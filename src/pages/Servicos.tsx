@@ -137,7 +137,7 @@ const Servicos = () => {
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-primary text-foreground p-4 rounded-xl shadow-button">
                     <div className="text-center">
-                      <div className="text-2xl font-bold">5+</div>
+                      <div className="text-2xl font-bold">15+</div>
                       <div className="text-sm">Anos de experiência</div>
                     </div>
                   </div>
@@ -248,6 +248,82 @@ const Servicos = () => {
           </div>
         </section>
 
+        {/* Mobile-First Before/After Section */}
+        <section className="py-20 bg-gradient-to-br from-blue-50 to-slate-100">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Resultados Reais
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                Veja a diferença que nosso trabalho faz. Equipamentos modernos e técnicas avançadas para resultados perfeitos.
+              </p>
+            </div>
+
+            {/* Mobile-optimized image showcase */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {/* Imagem principal */}
+              <div className="relative">
+                <div className="bg-white rounded-2xl p-4 shadow-xl">
+                  <img 
+                    src="/servico-fossa-real.jpg" 
+                    alt="Serviço de limpeza de fossa Big Sul"
+                    className="w-full h-64 md:h-80 object-cover rounded-xl"
+                    loading="lazy"
+                  />
+                  <div className="mt-4 text-center">
+                    <h3 className="text-xl font-bold text-foreground mb-2">Equipe Profissional</h3>
+                    <p className="text-muted-foreground">Trabalho executado com precisão e limpeza</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Segunda imagem */}
+              <div className="relative">
+                <div className="bg-white rounded-2xl p-4 shadow-xl">
+                  <img 
+                    src="/hero-real-2.jpg" 
+                    alt="Caminhões Big Sul prontos para atendimento"
+                    className="w-full h-64 md:h-80 object-cover rounded-xl"
+                    loading="lazy"
+                  />
+                  <div className="mt-4 text-center">
+                    <h3 className="text-xl font-bold text-foreground mb-2">Frota Completa</h3>
+                    <p className="text-muted-foreground">Caminhões sempre prontos para atender</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Destaques móveis */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center bg-white rounded-xl p-6 shadow-lg">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">15+</div>
+                <div className="text-foreground font-semibold mb-1">Anos</div>
+                <div className="text-sm text-muted-foreground">De experiência</div>
+              </div>
+              
+              <div className="text-center bg-white rounded-xl p-6 shadow-lg">
+                <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">1000+</div>
+                <div className="text-foreground font-semibold mb-1">Clientes</div>
+                <div className="text-sm text-muted-foreground">Satisfeitos</div>
+              </div>
+              
+              <div className="text-center bg-white rounded-xl p-6 shadow-lg">
+                <div className="text-3xl md:text-4xl font-bold text-orange-600 mb-2">24h</div>
+                <div className="text-foreground font-semibold mb-1">Disponível</div>
+                <div className="text-sm text-muted-foreground">Para emergências</div>
+              </div>
+              
+              <div className="text-center bg-white rounded-xl p-6 shadow-lg">
+                <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">100%</div>
+                <div className="text-foreground font-semibold mb-1">Limpo</div>
+                <div className="text-sm text-muted-foreground">Sem sujeira</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
@@ -287,7 +363,7 @@ const Servicos = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Experiência</h3>
                 <p className="text-muted-foreground">
-                  Mais de 5 anos de experiência com equipe altamente qualificada
+                  Mais de 15 anos de experiência com equipe altamente qualificada
                 </p>
               </div>
 

@@ -520,3 +520,247 @@
     font-size: 1.25rem !important;
   }
 }
+
+/* MOBILE-FIRST IMAGE GALLERY STYLES */
+.mobile-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .mobile-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+.mobile-image-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mobile-image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-image-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .mobile-image-card img {
+    height: 240px;
+  }
+}
+
+.mobile-image-card:hover img {
+  transform: scale(1.05);
+}
+
+.mobile-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 1rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-image-card:hover .mobile-image-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* WORK PROCESS SECTION */
+.work-process-mobile {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .work-process-mobile {
+    padding: 2rem;
+    margin: 2rem;
+  }
+}
+
+.process-step {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .process-step {
+    margin-bottom: 0;
+  }
+}
+
+.process-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+.process-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* STATS CARDS MOBILE */
+.stats-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .stats-mobile {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.stat-card-mobile {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card-mobile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* ENHANCED MOBILE BUTTONS */
+@media (max-width: 640px) {
+  .whatsapp-button,
+  .phone-button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    justify-content: center;
+    border-radius: 0.75rem;
+  }
+  
+  .whatsapp-button {
+    background: linear-gradient(135deg, #25D366, #1DA851);
+    margin-bottom: 0.75rem;
+  }
+  
+  .phone-button {
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+  }
+}
+
+/* ENHANCED FLOATING WHATSAPP FOR MOBILE */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+  }
+  
+  .floating-whatsapp:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.7);
+  }
+}
+
+/* MOBILE HERO IMPROVEMENTS */
+@media (max-width: 640px) {
+  .hero-mobile-optimized {
+    object-position: 80% center !important;
+    filter: brightness(0.7) contrast(1.3) !important;
+    transform: scale(1.1) !important;
+  }
+  
+  .section-professional .absolute.inset-0.bg-gradient-to-br {
+    background: linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.8) 0%, 
+      rgba(15, 23, 42, 0.7) 50%, 
+      rgba(59, 130, 246, 0.4) 100%) !important;
+  }
+}
+
+/* MOBILE TEXT IMPROVEMENTS */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.4;
+  }
+  
+  p {
+    font-size: 0.9rem !important;
+    line-height: 1.5;
+  }
+  
+  .text-xl {
+    font-size: 1rem !important;
+  }
+  
+  .text-lg {
+    font-size: 0.95rem !important;
+  }
+}
