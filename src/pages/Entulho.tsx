@@ -19,16 +19,6 @@ const Entulho = () => {
       description: "Remoção de restos de obra, tijolos, concreto, cerâmica",
       items: ["Tijolos e blocos", "Concreto e argamassa", "Cerâmica e azulejos", "Madeira de construção"]
     },
-    {
-      title: "Móveis e Eletrodomésticos",
-      description: "Descarte responsável de móveis antigos e aparelhos",
-      items: ["Móveis usados", "Eletrodomésticos", "Colchões", "Sofás e poltronas"]
-    },
-    {
-      title: "Limpeza de Terrenos",
-      description: "Limpeza completa de terrenos e áreas externas",
-      items: ["Galhos e folhas", "Terra e entulho", "Limpeza geral", "Preparação do terreno"]
-    }
   ];
 
   return (
@@ -67,7 +57,7 @@ const Entulho = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20remoção%20de%20entulho%20imediata"
+                href="https://wa.me/558694272264?text=Olá!%20Preciso%20de%20atendimento%20imediato%20para%20remoção%20de%20entulho"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-button text-xl px-12 py-6 transform hover:scale-105 transition-smooth"
@@ -76,11 +66,11 @@ const Entulho = () => {
                 Solicitar Atendimento Imediato
               </a>
               <a
-                href="tel:+5586999604704"
+                href="tel:+558694272264"
                 className="phone-button text-xl px-12 py-6 transform hover:scale-105 transition-smooth"
               >
                 <Phone className="w-6 h-6" />
-                Ligar: (86) 9960-4704
+                Ligar: (86) 9427-2264
               </a>
             </div>
           </div>
@@ -215,7 +205,7 @@ const Entulho = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5586999604704?text=Olá!%20Preciso%20de%20atendimento%20imediato%20para%20remoção%20de%20entulho"
+                href="https://wa.me/558694272264?text=Olá!%20Preciso%20de%20atendimento%20imediato%20para%20remoção%20de%20entulhoo%20de%20atendimento%20imediato%20para%20remoção%20de%20entulho"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-xl font-bold text-xl transition-all transform hover:scale-105 inline-flex items-center justify-center gap-3"
