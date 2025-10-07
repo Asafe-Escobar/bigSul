@@ -1,0 +1,39 @@
+/* Anti-Lovable CSS - Remove qualquer logo ou elemento da Lovable */
+
+/* Esconde todos os elementos relacionados à Lovable */
+[data-lovable],
+.lovable-logo,
+.lovable-watermark,
+[class*="lovable"],
+[id*="lovable"],
+img[src*="lovable"],
+div[style*="lovable"],
+span[style*="lovable"],
+iframe[src*="lovable"],
+a[href*="lovable"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* Remove overlays suspeitos */
+div[style*="position: fixed"][style*="z-index: 999"],
+div[style*="position: fixed"][style*="z-index: 9999"],
+div[style*="position: absolute"][style*="top: 0"][style*="right: 0"],
+div[style*="position: fixed"][style*="top: 0"][style*="right: 0"] {
+  display: none !important;
+}
+
+/* Esconde qualquer elemento com texto "lovable" */
+*:contains("lovable"),
+*:contains("Lovable"),
+*:contains("LOVABLE") {
+  display: none !important;
+}

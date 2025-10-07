@@ -140,9 +140,9 @@ const Entulho = () => {
                 <div className="bg-warning/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Truck className="w-8 h-8 text-warning" />
                 </div>
-                <h4 className="text-xl font-bold mb-3">2. Coleta</h4>
+                <h4 className="text-xl font-bold mb-3">2. Locação de container</h4>
                 <p className="text-white/80">
-                  Nossa equipe vai até o local com caminhão adequado para retirar o entulho
+                  Entregamos e posicionamos o container ideal para sua obra no local e data combinados.
                 </p>
               </div>
 

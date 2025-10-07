@@ -9,12 +9,47 @@
     })(window,document,'script','dataLayer','GTM-WJRBVH4F');</script>
     <!-- End Google Tag Manager -->
     
+    <!-- Anti-Lovable CSS - Remove qualquer logo injetada -->
+    <style>
+      /* Remove qualquer elemento da Lovable */
+      [data-lovable],
+      .lovable-logo,
+      .lovable-watermark,
+      [class*="lovable"],
+      [id*="lovable"],
+      img[src*="lovable"],
+      div[style*="lovable"],
+      span[style*="lovable"],
+      iframe[src*="lovable"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        top: -9999px !important;
+      }
+      
+      /* Remove qualquer elemento com z-index alto que pode ser overlay */
+      div[style*="z-index: 999"],
+      div[style*="z-index: 9999"],
+      div[style*="position: fixed"][style*="top: 0"],
+      div[style*="position: absolute"][style*="top: 0"] {
+        display: none !important;
+      }
+    </style>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BIG SUL - Serviços Especializados em Limpeza de Fossas</title>
     <meta name="description" content="Serviços profissionais de limpeza de fossas e remoção de entulho em Teresina-PI. Equipamentos modernos, atendimento rápido e preços a partir de R$ 159,99. Orçamento grátis!" />
     <meta name="keywords" content="limpa fossa, limpeza de fossa, desentupimento, remoção entulho, Teresina, Piauí, fossa séptica" />
     <meta name="author" content="BIG SUL" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/big-sul-new-logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/big-sul-new-logo.png" />
 
     <meta property="og:title" content="BIG SUL - Limpeza de Fossas Profissional" />
     <meta property="og:description" content="Serviços especializados em limpeza de fossas com equipamentos modernos. Atendimento em Teresina-PI. Orçamento grátis!" />
@@ -35,6 +70,78 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <div id="root"></div>
+    
+    <!-- Script para remover qualquer logo da Lovable injetada -->
+    <script>
+      // Função mais agressiva para remover logos da Lovable
+      function removeLovableLogo() {
+        // Lista de seletores para elementos da Lovable
+        const selectors = [
+          '[data-lovable]',
+          '.lovable-logo',
+          '.lovable-watermark',
+          'img[src*="lovable"]',
+          'div[class*="lovable"]',
+          'span[class*="lovable"]',
+          '[id*="lovable"]',
+          'iframe[src*="lovable"]',
+          'div[style*="lovable"]',
+          // Seletores mais genéricos para overlays
+          'div[style*="position: fixed"][style*="z-index"]',
+          'div[style*="position: absolute"][style*="top: 0"][style*="right: 0"]',
+          'div[style*="position: fixed"][style*="top: 0"][style*="right: 0"]'
+        ];
+        
+        selectors.forEach(selector => {
+          try {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => {
+              // Verifica se contém texto relacionado à Lovable
+              const text = el.textContent || el.innerHTML || '';
+              const src = el.src || '';
+              const className = el.className || '';
+              
+              if (text.toLowerCase().includes('lovable') || 
+                  src.toLowerCase().includes('lovable') ||
+                  className.toLowerCase().includes('lovable')) {
+                el.remove();
+              }
+            });
+          } catch (e) {
+            // Ignora erros de seletor
+          }
+        });
+        
+        // Remove qualquer script que contenha 'lovable'
+        const scripts = document.querySelectorAll('script');
+        scripts.forEach(script => {
+          if (script.src && script.src.includes('lovable')) {
+            script.remove();
+          }
+        });
+      }
+      
+      // Executa imediatamente
+      removeLovableLogo();
+      
+      // Executa quando DOM estiver pronto
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', removeLovableLogo);
+      }
+      
+      // Executa periodicamente para remover elementos injetados dinamicamente
+      setInterval(removeLovableLogo, 500);
+      
+      // Observer para mudanças no DOM
+      const observer = new MutationObserver(removeLovableLogo);
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['class', 'id', 'style']
+      });
+    </script>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
