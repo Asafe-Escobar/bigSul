@@ -109,7 +109,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-3">O que dizem nossos clientes</h2>
-              <p className="text-xl text-foreground/80 leading-relaxed">Prova social para reforçar confiança (exemplos ilustrativos)</p>
+              <p className="text-xl text-foreground/80 leading-relaxed"></p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="rounded-2xl p-7 sm:p-8 bg-white shadow-elegant border border-black/5 max-w-md mx-auto">
